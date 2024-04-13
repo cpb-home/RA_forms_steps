@@ -27,7 +27,7 @@ const Steps = () => {
     setItems((prev) => prev.filter((el) => el.id !== id));
     setForm({ date: '', distance: '' });
   }
-console.log(1)
+  
   const handleAddItem = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
