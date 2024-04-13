@@ -42,8 +42,7 @@ console.log(1)
           return el;
         }))]);
       } else {
-        const a: DistItem = { id: idNum.current, date: form.date, distance: Number(form.distance) };
-        setItems((prev) => [...prev, a]);
+        setItems((prev) => [...prev, { id: idNum.current, date: form.date, distance: Number(form.distance) }]);
       }
       idNum.current++;
       setForm({ date: '', distance: '' });
