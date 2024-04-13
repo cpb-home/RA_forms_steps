@@ -1,0 +1,107 @@
+.form-cont {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    margin-bottom: 20px;
+}
+
+.form-date {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: flex-end;
+}
+
+.form-distance {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: flex-end;
+}
+
+.form-btn {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: flex-end;
+}
+
+.form-item__header {
+    text-align: left;
+    color: black;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form-cont input {
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    height: 40px;
+    text-align: center;
+}
+
+.form-btn button {
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    height: 54px;
+    background-color: white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(170, 170, 170);
+    }
+}
+
+.list-cont {
+    padding: 20px;
+}
+
+.list-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 10px;
+}
+
+.list-header__item {
+    text-align: left;
+    color: black;
+    text-align: center;
+}
+
+.list-body {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.list-body__el {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.list-body__el__item {
+    text-align: left;
+    color: black;
+    text-align: center;
+}
+
+.list-body__el__item button {
+    border: 0;
+    background-color: white;
+    margin: 0 1px;
+    cursor: pointer;
+    padding: 5px;
+
+    &:hover {
+        background-color: rgb(170, 170, 170);
+        border-radius: 3px;
+    }
+}

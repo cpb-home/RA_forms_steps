@@ -4,3 +4,9 @@
   padding: 2rem;
   text-align: center;
 }
+
+.container {
+  margin: 0 auto;
+  width: 70vw;
+  background-color: white;
+}

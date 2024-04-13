@@ -1,13 +1,12 @@
 import './App.css'
+import Steps from './components/Steps/Steps'
 
 function App() {
 
   return (
-    <>
-      <div>
-        test
-      </div>
-    </>
+    <div className='container'>
+      <Steps />
+    </div>
   )
 }
 
