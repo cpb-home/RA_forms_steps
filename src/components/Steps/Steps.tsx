@@ -25,15 +25,27 @@ const Steps = () => {
 
   const handleRemoveItem = (id: number) => {
     setItems((prev) => prev.filter((el) => el.id !== id));
+    setForm({ date: '', distance: '' });
   }
-
+console.log(1)
   const handleAddItem = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (form.date !== '' && form.distance !== '') {
-      setItems((prev) => [...prev, { id: idNum.current, date: form.date, distance: form.distance }]);
+
+      const dateExist = items.findIndex(el => el.date === form.date);
+      if (dateExist > -1) {
+        setItems((prev) => [...(prev.map(el => {
+          if (el.date === form.date) {
+            el.distance = Number(el.distance) + Number(form.distance);
+          }
+          return el;
+        }))]);
+      } else {
+        const a: DistItem = { id: idNum.current, date: form.date, distance: Number(form.distance) };
+        setItems((prev) => [...prev, a]);
+      }
       idNum.current++;
-      console.log(idNum, items);
       setForm({ date: '', distance: '' });
     }
   }
@@ -56,7 +68,7 @@ const Steps = () => {
           <header className={styles['form-item__header']}>
             Дата (ДД.ММ.ГГГГ)
           </header>
-          <input type="date" name='date' onChange={handleChangeValue} />
+          <input type="date" name='date' value={form.date.split('-').reverse().join('-')} onChange={handleChangeValue} />
         </div>
         <div className={styles['form-distance']}>
           <header className={styles['form-item__header']}>
